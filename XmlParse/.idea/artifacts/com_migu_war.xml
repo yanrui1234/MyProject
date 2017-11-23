@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="com.migu:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="com.migu.war">
+      <element id="artifact" artifact-name="com.migu:war exploded" />
+    </root>
+  </artifact>
+</component>
