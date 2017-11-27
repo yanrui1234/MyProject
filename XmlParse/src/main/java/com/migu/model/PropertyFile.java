@@ -1,5 +1,8 @@
 package com.migu.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("propertyFile")
 public class PropertyFile {
     private String propertyKey;
     private String propertyValue;

@@ -1,5 +1,8 @@
 package com.migu.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("BarrageActivity")
 public class BarrageActivity {
     private String filmId;
     private String activityId;

@@ -1,5 +1,8 @@
 package com.migu.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("mediafile")
 public class MediaFile {
 
     private String mediaFileID;

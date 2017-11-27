@@ -1,8 +1,11 @@
 package com.migu.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@XStreamAlias("field")
 public class Fields {
     private String SubSerial_IDS;
     private String SubAlbum_IDS;

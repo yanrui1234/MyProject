@@ -1,5 +1,8 @@
 package com.migu.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("displayFile")
 public class DisplayFile {
     private String dpFileID;
     private String dpFileName;

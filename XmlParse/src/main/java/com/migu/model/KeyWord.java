@@ -1,5 +1,8 @@
 package com.migu.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("keyword")
 public class KeyWord {
     private String primaryKey;
     private String keywordName;

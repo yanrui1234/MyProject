@@ -1,6 +1,8 @@
 package com.migu.model;
 
-//根节点
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("content")
 public class Content {
     private String version;
     private String contid;

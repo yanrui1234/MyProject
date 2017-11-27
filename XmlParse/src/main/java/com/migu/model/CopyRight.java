@@ -1,5 +1,8 @@
 package com.migu.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("copyRight")
 public class CopyRight {
     private String CopyRightObjectID;
     private String N_CPID;

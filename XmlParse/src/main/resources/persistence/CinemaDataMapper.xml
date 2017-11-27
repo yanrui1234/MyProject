@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.migu.resources.persistence.CinemaDataMapper" >
+  <resultMap id="BaseResultMap" type="com.migu.domain.CinemaData" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="contId" property="contid" jdbcType="VARCHAR" />
+    <result column="fields" property="fields" jdbcType="VARCHAR" />
+    <result column="packId" property="packid" jdbcType="VARCHAR" />
+    <result column="limitDate" property="limitdate" jdbcType="VARCHAR" />
+    <result column="contDisplayType" property="contdisplaytype" jdbcType="VARCHAR" />
+    <result column="contAssist" property="contassist" jdbcType="VARCHAR" />
+    <result column="mediaType" property="mediatype" jdbcType="VARCHAR" />
+    <result column="mediaShape" property="mediashape" jdbcType="VARCHAR" />
+    <result column="mediaYear" property="mediayear" jdbcType="VARCHAR" />
+    <result column="mediaMing" property="mediaming" jdbcType="VARCHAR" />
+    <result column="mediaChu" property="mediachu" jdbcType="VARCHAR" />
+    <result column="mediaArea" property="mediaarea" jdbcType="VARCHAR" />
+    <result column="mediaGkzp" property="mediagkzp" jdbcType="VARCHAR" />
+    <result column="mediaMovieForm" property="mediamovieform" jdbcType="VARCHAR" />
+    <result column="mediaPlat" property="mediaplat" jdbcType="VARCHAR" />
+    <result column="mediaProj" property="mediaproj" jdbcType="VARCHAR" />
+    <result column="mediaIsDubi" property="mediaisdubi" jdbcType="VARCHAR" />
+    <result column="mediaDirector" property="mediadirector" jdbcType="VARCHAR" />
+    <result column="mediaScore" property="mediascore" jdbcType="VARCHAR" />
+    <result column="mediaVideoName" property="mediavideoname" jdbcType="VARCHAR" />
+    <result column="mediaTime" property="mediatime" jdbcType="VARCHAR" />
+    <result column="mediaNianling" property="medianianling" jdbcType="VARCHAR" />
+    <result column="isUpdating" property="isupdating" jdbcType="VARCHAR" />
+    <result column="contFormType" property="contformtype" jdbcType="VARCHAR" />
+    <result column="mediaGkhd" property="mediagkhd" jdbcType="VARCHAR" />
+    <result column="mediaReportArea" property="mediareportarea" jdbcType="VARCHAR" />
+    <result column="contDuration" property="contduration" jdbcType="INTEGER" />
+    <result column="contMediaLevel" property="contmedialevel" jdbcType="VARCHAR" />
+    <result column="keywordsCopy" property="keywordscopy" jdbcType="VARCHAR" />
+    <result column="recomCopy" property="recomcopy" jdbcType="VARCHAR" />
+    <result column="nameCopy" property="namecopy" jdbcType="VARCHAR" />
+    <result column="detailCopy" property="detailcopy" jdbcType="VARCHAR" />
+    <result column="mediaMiaoshud" property="mediamiaoshud" jdbcType="VARCHAR" />
+    <result column="copyrightTerminal" property="copyrightterminal" jdbcType="VARCHAR" />
+    <result column="mediaMovieFormNot" property="mediamovieformnot" jdbcType="VARCHAR" />
+    <result column="mediaLaiYuan" property="medialaiyuan" jdbcType="VARCHAR" />
+    <result column="mediaActor" property="mediaactor" jdbcType="VARCHAR" />
+    <result column="programId" property="programid" jdbcType="INTEGER" />
+    <result column="pyFirst" property="pyfirst" jdbcType="VARCHAR" />
+    <result column="salesCategory" property="salescategory" jdbcType="VARCHAR" />
+    <result column="salesStartTime" property="salesstarttime" jdbcType="TIMESTAMP" />
+    <result column="salesEndTime" property="salesendtime" jdbcType="TIMESTAMP" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="publishTime" property="publishtime" jdbcType="TIMESTAMP" />
+    <result column="contName" property="contname" jdbcType="VARCHAR" />
+    <result column="contDetail" property="contdetail" jdbcType="VARCHAR" />
+    <result column="shortName" property="shortname" jdbcType="VARCHAR" />
+    <result column="doubanScore" property="doubanscore" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
