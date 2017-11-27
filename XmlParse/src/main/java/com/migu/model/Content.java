@@ -2,6 +2,9 @@ package com.migu.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @XStreamAlias("content")
 public class Content {
     private String version;
@@ -31,19 +34,19 @@ public class Content {
     private String AccessPlatFormType;
 
     //促销
-    private String salesPromotions;
+    private List<SalesPromotion> salesPromotions = new ArrayList<SalesPromotion>();
     //客户端类型 促销
-    private String clientTypeSales;
+    private List<ClientTypeSale> clientTypeSales = new ArrayList<ClientTypeSale>();
     //渠道计费
-    private String channelPkgsProduct;
+    private List<Pkg> channelPkgsProduct = new ArrayList<Pkg>();
     //电影票
-    private String tickets;
+    private List<Ticket> tickets = new ArrayList<Ticket>();
     //流量限免
-    private String freeFlow;
+    private FreeFlow freeFlow;
     //角标
-    private String footers;
+    private List<Footer> footers = new ArrayList<Footer>();
     //只输出节目单中不能回看的节目
-    private String playBill;
+    private List<Program> playBill = new ArrayList<Program>();
 
     private Fields fields;
 
@@ -223,59 +226,59 @@ public class Content {
         AccessPlatFormType = accessPlatFormType;
     }
 
-    public String getSalesPromotions() {
+    public List<SalesPromotion> getSalesPromotions() {
         return salesPromotions;
     }
 
-    public void setSalesPromotions(String salesPromotions) {
+    public void setSalesPromotions(List<SalesPromotion> salesPromotions) {
         this.salesPromotions = salesPromotions;
     }
 
-    public String getClientTypeSales() {
+    public List<ClientTypeSale> getClientTypeSales() {
         return clientTypeSales;
     }
 
-    public void setClientTypeSales(String clientTypeSales) {
+    public void setClientTypeSales(List<ClientTypeSale> clientTypeSales) {
         this.clientTypeSales = clientTypeSales;
     }
 
-    public String getChannelPkgsProduct() {
+    public List<Pkg> getChannelPkgsProduct() {
         return channelPkgsProduct;
     }
 
-    public void setChannelPkgsProduct(String channelPkgsProduct) {
+    public void setChannelPkgsProduct(List<Pkg> channelPkgsProduct) {
         this.channelPkgsProduct = channelPkgsProduct;
     }
 
-    public String getTickets() {
+    public List<Ticket> getTickets() {
         return tickets;
     }
 
-    public void setTickets(String tickets) {
+    public void setTickets(List<Ticket> tickets) {
         this.tickets = tickets;
     }
 
-    public String getFreeFlow() {
+    public FreeFlow getFreeFlow() {
         return freeFlow;
     }
 
-    public void setFreeFlow(String freeFlow) {
+    public void setFreeFlow(FreeFlow freeFlow) {
         this.freeFlow = freeFlow;
     }
 
-    public String getFooters() {
+    public List<Footer> getFooters() {
         return footers;
     }
 
-    public void setFooters(String footers) {
+    public void setFooters(List<Footer> footers) {
         this.footers = footers;
     }
 
-    public String getPlayBill() {
+    public List<Program> getPlayBill() {
         return playBill;
     }
 
-    public void setPlayBill(String playBill) {
+    public void setPlayBill(List<Program> playBill) {
         this.playBill = playBill;
     }
 

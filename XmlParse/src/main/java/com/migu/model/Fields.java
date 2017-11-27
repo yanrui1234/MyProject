@@ -65,7 +65,7 @@ public class Fields {
     //关键字（类）
     private List<KeyWord> KEYWORDS = new ArrayList<KeyWord>();
 
-    private String LABELS;
+    private List<Label> LABELS = new ArrayList<Label>();
 
     //媒体文件（类）
     private List<MediaFile> mediafiles = new ArrayList<MediaFile>();
@@ -471,11 +471,11 @@ public class Fields {
         this.KEYWORDS = KEYWORDS;
     }
 
-    public String getLABELS() {
+    public List<Label> getLABELS() {
         return LABELS;
     }
 
-    public void setLABELS(String LABELS) {
+    public void setLABELS(List<Label> LABELS) {
         this.LABELS = LABELS;
     }
 

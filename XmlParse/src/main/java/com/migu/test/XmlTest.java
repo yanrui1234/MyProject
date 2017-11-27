@@ -18,12 +18,12 @@ public class XmlTest {
         XmlTest xmlTest = new XmlTest();
 
         //遍历插入数据库测试
-        ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+        /*ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         CinemaDataServiceImpl cinemaDataServiceImpl = (CinemaDataServiceImpl) ac.getBean("cinemaDataServiceImpl");
-        xmlTest.traverseFolderIntoDB(filePath,cinemaDataServiceImpl.getCinemaDataMapper());
+        xmlTest.traverseFolderIntoDB(filePath,cinemaDataServiceImpl.getCinemaDataMapper());*/
 
         //遍历写入文件测试
-        //xmlTest.traverseFolderIntoFile(filePath);
+        xmlTest.traverseFolderIntoFile(filePath);
         System.out.println("解析结束：" + System.currentTimeMillis());
     }
 
@@ -59,7 +59,7 @@ public class XmlTest {
         //注册使用了注解的VO
         xstream.processAnnotations(new Class[]{BarrageActivity.class, BarrageActivity.class,
                 DisplayFile.class, MediaFile.class, KeyWord.class, CopyRight.class,
-                Fields.class, Content.class});
+                Fields.class, Content.class, SalesPromotion.class});
         try {
             //File file = new File(path);
             if(file.exists()){
@@ -79,7 +79,9 @@ public class XmlTest {
     }
 
 
+    //递归遍历写入文件
     public void traverseFolderIntoFile(String path){
+        String resultPath = "D:\\result.txt";
         File file = new File(path);
         if (file.exists()) {
             File[] files = file.listFiles();
@@ -93,7 +95,7 @@ public class XmlTest {
                         traverseFolderIntoFile(file2.getAbsolutePath());
                     } else {
                         //System.out.println("文件:" + file2.getAbsolutePath());
-                        readXmlToFile(file2);
+                        readXmlToFile(resultPath, file2);
                     }
                 }
             }
@@ -102,13 +104,14 @@ public class XmlTest {
         }
     }
 
-    public void readXmlToFile(File file){
+    public void readXmlToFile(String resultPath, File file){
         XStream xstream = new XStream(new DomDriver());
         xstream.setMode(XStream.NO_REFERENCES);
         //注册使用了注解的VO
-        xstream.processAnnotations(new Class[]{BarrageActivity.class, BarrageActivity.class,
+        xstream.processAnnotations(new Class[]{BarrageActivity.class,PropertyFile.class,
                 DisplayFile.class, MediaFile.class, KeyWord.class, CopyRight.class,
-                Fields.class, Content.class});
+                Fields.class, Content.class, ClientTypeSale.class, Footer.class,
+        FreeFlow.class, Label.class, Pkg.class, Program.class, SalesPromotion.class,Ticket.class});
 
         try {
             //File file = new File(path);
@@ -116,21 +119,23 @@ public class XmlTest {
                 InputStreamReader o = new FileReader(file);
                 Content content =  (Content) xstream.fromXML(o);
                 //写入文件
-                String filePath = "D:\\result.txt";
-                String data = content.getFields().getMMS_ID() + "," +
-                        content.getPRDPACK_ID() + "," +
-                        content.getFields().getDISPLAYTYPE() + "," +
-                        content.getFields().getAssist() + "," +
-                        content.isIsupdating() + "，" +
-                        content.getFields().getFORMTYPE() + "," +
-                        content.getFields().getCDuration() + "," +
-                        content.getFields().getMediaLevel() + "," +
-                        content.getFields().getKeywordsCopy() + "," +
-                        content.getFields().getRecommendationCopy() + "," +
-                        content.getFields().getNameCopy() + "," +
-                        content.getFields().getDetailCopy() + "," +
+                String data = content.getContid() + "~" +
+                        content.getPRDPACK_ID() + "~" +
+                        content.getFields().getDISPLAYTYPE() + "~" +
+                        content.getFields().getAssist() + "~" +
+                        content.isIsupdating() + "~" +
+                        content.getFields().getFORMTYPE() + "~" +
+                        content.getFields().getCDuration() + "~" +
+                        content.getFields().getMediaLevel() + "~" +
+                        content.getFields().getKeywordsCopy() + "~" +
+                        content.getFields().getRecommendationCopy() + "~" +
+                        content.getFields().getNameCopy() + "~" +
+                        content.getFields().getDetailCopy() + "~" +
                         content.getFields().getCopyRight().getTerminal();
-                this.writeToFile(filePath,data);
+
+                //如果文件存在，则追加内容；如果文件不存在，则创建文件
+                File f = new File(resultPath);
+                this.writeToFile(f, data);
             }
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -138,12 +143,12 @@ public class XmlTest {
         }
     }
 
-    public void writeToFile(String filePath,String data){
+    public void writeToFile(File file,String data){
         FileWriter fw = null;
         try {
             //如果文件存在，则追加内容；如果文件不存在，则创建文件
-            File f = new File(filePath);
-            fw = new FileWriter(f, true);
+            //File f = new File(resultPath);
+            fw = new FileWriter(file, true);
             fw.write(data);
             fw.write("\r\n");
             fw.flush();
@@ -151,5 +156,9 @@ public class XmlTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void cycleReadIntoFile() {
+
     }
 }
