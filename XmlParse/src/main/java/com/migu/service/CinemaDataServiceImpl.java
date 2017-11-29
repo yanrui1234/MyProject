@@ -1,5 +1,6 @@
 package com.migu.service;
 
+import com.migu.Util.CommonUtil;
 import com.migu.dao.CinemaDataDao;
 import com.migu.domain.CinemaData;
 import com.migu.persistence.CinemaDataMapper;
@@ -12,10 +13,10 @@ import javax.annotation.Resource;
 public class CinemaDataServiceImpl implements CinemaDataService{
     @Resource
     private CinemaDataMapper cinemaDataMapper;
-    @Override
-    public void insert(CinemaData cinemaData) {
+    @Resource
+    private CommonUtil commonUtil;
+    private String resultPath;
 
-    }
 
     public CinemaDataMapper getCinemaDataMapper() {
         return cinemaDataMapper;
@@ -23,5 +24,21 @@ public class CinemaDataServiceImpl implements CinemaDataService{
 
     public void setCinemaDataMapper(CinemaDataMapper cinemaDataMapper) {
         this.cinemaDataMapper = cinemaDataMapper;
+    }
+
+    public CommonUtil getCommonUtil() {
+        return commonUtil;
+    }
+
+    public void setCommonUtil(CommonUtil commonUtil) {
+        this.commonUtil = commonUtil;
+    }
+
+    public String getResultPath() {
+        return resultPath;
+    }
+
+    public void setResultPath(String resultPath) {
+        this.resultPath = resultPath;
     }
 }

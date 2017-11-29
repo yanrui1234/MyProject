@@ -13,6 +13,6 @@ public class UserServiceTest extends SpringTestCase {
     public void selectUserByIdTest(){
         CinemaData cm = new CinemaData();
         cm.setContid("123456");
-        userService.insert(cm);
+        //userService.insert(cm);
     }
 }

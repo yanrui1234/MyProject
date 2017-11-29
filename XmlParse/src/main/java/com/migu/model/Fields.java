@@ -13,7 +13,7 @@ public class Fields {
     private String Album_IDS;
     private String DISPLAYFILELISTS;
     private String MMS_ID;
-    private String CDuration;
+    private Integer CDuration;
     private String CPID;
     private String ECID;
     private String UDID;
@@ -127,11 +127,11 @@ public class Fields {
         this.MMS_ID = MMS_ID;
     }
 
-    public String getCDuration() {
+    public Integer getCDuration() {
         return CDuration;
     }
 
-    public void setCDuration(String CDuration) {
+    public void setCDuration(Integer CDuration) {
         this.CDuration = CDuration;
     }
 

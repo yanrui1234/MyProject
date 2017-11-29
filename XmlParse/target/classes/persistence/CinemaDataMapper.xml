@@ -42,7 +42,7 @@
     <result column="mediaMovieFormNot" property="mediamovieformnot" jdbcType="VARCHAR" />
     <result column="mediaLaiYuan" property="medialaiyuan" jdbcType="VARCHAR" />
     <result column="mediaActor" property="mediaactor" jdbcType="VARCHAR" />
-    <result column="programId" property="programid" jdbcType="INTEGER" />
+    <result column="programId" property="programid" jdbcType="VARCHAR" />
     <result column="pyFirst" property="pyfirst" jdbcType="VARCHAR" />
     <result column="salesCategory" property="salescategory" jdbcType="VARCHAR" />
     <result column="salesStartTime" property="salesstarttime" jdbcType="TIMESTAMP" />

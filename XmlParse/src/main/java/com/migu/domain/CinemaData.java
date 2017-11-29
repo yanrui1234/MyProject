@@ -118,7 +118,7 @@ public class CinemaData implements Serializable {
     private String mediaactor;
 
     @Column(name = "programId")
-    private Integer programid;
+    private String programid;
 
     @Column(name = "pyFirst")
     private String pyfirst;
@@ -672,14 +672,14 @@ public class CinemaData implements Serializable {
     /**
      * @return programId
      */
-    public Integer getProgramid() {
+    public String getProgramid() {
         return programid;
     }
 
     /**
      * @param programid
      */
-    public void setProgramid(Integer programid) {
+    public void setProgramid(String programid) {
         this.programid = programid;
     }
 
@@ -821,5 +821,32 @@ public class CinemaData implements Serializable {
      */
     public void setDoubanscore(String doubanscore) {
         this.doubanscore = doubanscore;
+    }
+
+    public String toString2() {
+        return contid + "~" + fields + "~" +
+                packid + "~" + limitdate + "~" +
+                contdisplaytype + "~" + contassist + "~" +
+                mediatype + "~" + mediashape + "~" +
+                mediayear + "~" + mediaming + "~" +
+                mediachu + "~" + mediaarea + "~" +
+                mediagkzp + "~" + mediamovieform + "~" +
+                mediaplat + "~" + mediaproj + "~" +
+                mediaisdubi + "~" + mediadirector + "~" +
+                mediascore + "~" + mediavideoname + "~" +
+                mediatime + "~" + medianianling + "~" +
+                isupdating + "~" + contformtype + "~" +
+                mediagkhd + "~" + mediareportarea + "~" +
+                contduration + "~" + contmedialevel + "~" +
+                keywordscopy + "~" + recomcopy + "~" +
+                namecopy + "~" + detailcopy + "~" +
+                mediamiaoshud + "~" + copyrightterminal + "~" +
+                mediamovieformnot + "~" + medialaiyuan + "~" +
+                mediaactor + "~" + programid + "~" +
+                pyfirst + "~" + salescategory + "~" +
+                salesstarttime + "~" + salesendtime + "~" +
+                name + "~" + publishtime + "~" +
+                contname + "~" + contdetail + "~" +
+                shortname + "~" + doubanscore;
     }
 }

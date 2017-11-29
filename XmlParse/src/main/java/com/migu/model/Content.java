@@ -26,7 +26,7 @@ public class Content {
     private boolean issuph264;
     private boolean issupwww;
     private boolean issuprchd;
-    private boolean isupdating;
+    private String isupdating;
     private String PRDPACK_ID;
     private String BC_ID;
     private String SP_ID;
@@ -178,11 +178,11 @@ public class Content {
         this.issuprchd = issuprchd;
     }
 
-    public boolean isIsupdating() {
+    public String getIsupdating() {
         return isupdating;
     }
 
-    public void setIsupdating(boolean isupdating) {
+    public void setIsupdating(String isupdating) {
         this.isupdating = isupdating;
     }
 
